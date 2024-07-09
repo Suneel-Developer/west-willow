@@ -99,7 +99,7 @@ const ShopAllModal = ({ isOpen, onClose }) => {
 
                                 <div className='px-2 text-white flex-1'>
                                     <h6 className='text-sm cooper-m mb-[3px] leading-[1.2]'>Jen L. - Marketing Manager</h6>
-                                    <h6 className='text-sm karla-r leading-[1.5]'>Don't forget! We offer FREE shipping on all orders over $100+ USD. Check out bundle discounts as well!</h6>
+                                    <h6 className='text-sm karla-r leading-[1.5]'>Dont forget! We offer FREE shipping on all orders over $100+ USD. Check out bundle discounts as well!</h6>
                                 </div>
                             </div>
 

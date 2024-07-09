@@ -22,7 +22,7 @@ const ShopBestSellers = () => {
 
                                 <div className='flex-1'>
                                     <strong className='text-[#212529] text-lg karla-b'>Choose your pet photo</strong>
-                                    <p className='flex-1 text-base karla-r'>Upload a photo of your pet with your order. We accept 98% of all photos! Our team will always reach out if your photo isn't right.</p>
+                                    <p className='flex-1 text-base karla-r'>Upload a photo of your pet with your order. We accept 98% of all photos! Our team will always reach out if your photo is not right.</p>
                                 </div>
                             </div>
 
@@ -33,7 +33,7 @@ const ShopBestSellers = () => {
 
                                 <div className='flex-1'>
                                     <strong className='text-[#212529] text-lg karla-b'>Customize & make it your own</strong>
-                                    <p className='flex-1 text-base karla-r'>Add your pet's name, choose a background color, customize the style, and select a frame & size.</p>
+                                    <p className='flex-1 text-base karla-r'>Add your pets name, choose a background color, customize the style, and select a frame & size.</p>
                                 </div>
                             </div>
 

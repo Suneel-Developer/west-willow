@@ -1,33 +1,3 @@
-// import React from 'react'
-// import "swiper/css";
-// import { Swiper, SwiperSlide } from "swiper/react";
-
-// const BrowseReviews = () => {
-//     return (
-//         <section className='py-2 mb-7 px-3'>
-//             <div className='max-w-[1296px] mx-auto w-full rounded-3xl px-7 py-8 bg-bg-light'>
-//                 <h2 className='text-center mb-2 text-2xl leading-[1.2] karla-m text-[#141518]'>West & Willow In The Wild</h2>
-
-//                 <Swiper
-//                     spaceBetween={20}
-//                     slidesPerView="auto"
-//                 >
-//                     {/* Slide 01  */}
-//                     <SwiperSlide className="card card-one min-w-[292px] md:min-w-[292px] max-w-[240px] md:max-w-[292px] w-full bg-cover bg-center bg-no-repeat">
-//                         <div className="w-full h-full bg-white rounded-3xl p-5">
-//                             <img src="/assets/women_360x360_crop_center.webp" alt="" className='mb-4 h-[360px]' />
-//                         </div>
-//                     </SwiperSlide>
-//                 </Swiper>
-//             </div>
-//         </section>
-//     )
-// }
-
-// export default BrowseReviews
-
-
-
 "use client"
 import React from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -79,7 +49,7 @@ const BrowseReviews = () => {
                             <img src="/assets/men-1_360x360_crop_center.webp" alt="Reviews 04" className='mb-4 h-[208px] xxs:h-[252px]' />
 
                             <div className='mb-4 text-[15px] text-bg-primary karla-r'>
-                                <em>Margot & Dad...I'm not crying, you're crying! (@</em>jayholloway_)
+                                <em>Margot & Dad...Im not crying, youre crying! (@</em>jayholloway_)
                             </div>
                         </div>
                     </SwiperSlide>

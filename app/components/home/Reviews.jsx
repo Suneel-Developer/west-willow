@@ -21,7 +21,7 @@ const reviewsData = [
         id: 2,
         name: 'Beatriz R.',
         date: '08/07/2024',
-        text: 'I’m in love !!',
+        text: 'Im in love !!',
         image: '/assets/reviews_02.jpg',
         product: {
             name: 'Onward VIP Protection+',

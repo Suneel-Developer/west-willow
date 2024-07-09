@@ -15,7 +15,7 @@ const Faq = () => {
             question: 'What makes a good photo?',
             answer: (
                 <>
-                    <p className='text-[#212529] text-base mb-4 karla-r'>1.) Close up time! Be sure your pet's photo is taken in a well lit area. Ideally without a filter and in natural lighting.</p>
+                    <p className='text-[#212529] text-base mb-4 karla-r'>1.) Close up time! Be sure your pets photo is taken in a well lit area. Ideally without a filter and in natural lighting.</p>
                     <p className='text-[#212529] text-base mb-4 karla-r'>2.) Close up and head on, showing as much of the ears, head, neck, and chest as possible. This will allow us to get a good crop of your pets face.</p>
                     <p className='text-[#212529] text-base mb-4 karla-r'>3.) Avoid overhead, overly filtered or blurry photos. We are typically unable to illustrate photos of your pet lying down.</p>
                     <p className='text-[#212529] text-base karla-r'>Review our <Link href="#" className='text-bg-primary underline'>Image Guidelines</Link> for more information.</p>
@@ -31,7 +31,7 @@ const Faq = () => {
         {
             question: 'What animals do you illustrate?',
             answer: (
-                <p className='text-[#212529] text-base karla-r'>Yes! We create portraits for unique pets around the world. From cute bunnies to pet birds. Odds are, if it's an animal, we will create a portrait for you. Please note: at this time we do not create portraits of humans (no matter how cute you are!).</p>
+                <p className='text-[#212529] text-base karla-r'>Yes! We create portraits for unique pets around the world. From cute bunnies to pet birds. Odds are, if its an animal, we will create a portrait for you. Please note: at this time we do not create portraits of humans (no matter how cute you are!).</p>
             )
         },
         {
@@ -46,7 +46,7 @@ const Faq = () => {
         {
             question: 'Can I preview my portrait before it ships?',
             answer: (
-                <p className='text-[#212529] text-base karla-r'>In an effort to get your order to you as efficiently as possible, we do not offer artwork previews or proofs. But don't worry! If your provided photo won't make the best portrait, we'll reach out to you for a new one. Be sure to review Image Guidelines here .</p>
+                <p className='text-[#212529] text-base karla-r'>In an effort to get your order to you as efficiently as possible, we do not offer artwork previews or proofs. But dont worry! If your provided photo wont make the best portrait, we will reach out to you for a new one. Be sure to review Image Guidelines here .</p>
             )
         }
     ];

@@ -56,7 +56,7 @@ const SurpriseOffer = () => {
                                     <p className='text-sm text-center karla-r text-[#2d2d2d]'>when you sign up for emails</p>
                                 </div>
 
-                                <Link href="#" className='text-center underline text-base mt-3 text-[#2d2d2d]'>NO, I'LL PAY FULL PRICE</Link>
+                                <Link href="#" className='text-center underline text-base mt-3 text-[#2d2d2d]'>NO, ILL PAY FULL PRICE</Link>
                             </div>
 
                         </div>

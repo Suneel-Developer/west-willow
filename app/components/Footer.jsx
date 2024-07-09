@@ -60,7 +60,7 @@ const Footer = () => {
                     <div className='w-full lg:w-[33.33333333%] lg:px-3'>
                         <form>
                             <h2 className='mb-4 mt-2 text-2xl text-center lg:text-start leading-[1.2] cooper-m text-white'>
-                                Let's Keep in Touch
+                                Lets Keep in Touch
                             </h2>
 
                             <div className="flex mb-2 relative justify-center lg:justify-start w-full">
