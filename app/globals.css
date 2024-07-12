@@ -114,3 +114,38 @@ li {
         transform: translateY(-20px);
     }
 }
+
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: 0px;
+    /* Firefox */
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, and Opera */
+  }
+
+
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+
+swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
+    width: 15px;
+    height: 15px;
+    box-shadow: seashell;
+}
+
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:active {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
+    background: black;
+    border: 3px solid #ffff;
+}

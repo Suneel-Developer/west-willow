@@ -11,6 +11,12 @@ const FilterDropdown = ({ onFilterChange }) => {
         { label: 'Price: Low to High', value: 'priceLowToHigh' },
         { label: 'Price: High to Low', value: 'priceHighToLow' },
         { label: 'Reviews', value: 'reviews' },
+        { label: 'Housewarming', value: 'Housewarming' },
+        { label: 'Father\'s Day', value: 'Father\'s Day' },
+        { label: 'Mother\'s Day', value: 'Mother\'s Day' },
+        { label: 'Anniversary', value: 'Anniversary' },
+        { label: 'Wedding', value: 'Wedding' },
+        { label: 'Get Well', value: 'Get Well' },
         { label: 'Clear Filter', value: 'clear' },
     ];
 
@@ -19,14 +25,13 @@ const FilterDropdown = ({ onFilterChange }) => {
         onFilterChange(filter.value);
         setIsOpen(false);
     };
-    
 
     return (
         <div className="relative inline-block text-left">
             <div>
                 <button
                     type="button"
-                    className="border rounded-md flex items-center justify-between cursor-pointer outline-none border-[#ced4da] h-[38px] px-3 gap-5 text-base bg-white"
+                    className="border rounded-md w-[160px] flex items-center justify-between cursor-pointer outline-none border-[#ced4da] h-[38px] px-3 gap-5 text-base bg-white"
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     <span>{selectedFilter}</span>
@@ -34,7 +39,7 @@ const FilterDropdown = ({ onFilterChange }) => {
                 </button>
             </div>
             {isOpen && (
-                <div className="absolute right-0 mt-2 w-[160px] rounded-md z-10 shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                <div className="absolute right-0 mt-2 w-[160px] h-56 no-scrollbar  overflow-y-auto rounded-md z-10 shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                     <div className="py-1">
                         {filters.map((filter) => (
                             <button

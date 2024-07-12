@@ -44,6 +44,7 @@ const Header = () => {
                         <button onClick={openShopAllModal} className='text-base karla-b text-bg-primary uppercase flex items-center'>
                             Shop All
                             <MdArrowDropDown className='text-bg-primary' />
+                            <div className='w-2 h-2 bg-[#ff5c5d] rounded-full absolute top-1 right-6'></div>
                         </button>
                     </li>
                 </div>

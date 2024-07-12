@@ -16,6 +16,7 @@ const Products = () => {
             reviews: "17,555",
             img: "/assets/cutom-pet-portrait.webp",
             bestSeller: true,
+            category: "Housewarming"
         },
         {
             id: 2,
@@ -25,6 +26,7 @@ const Products = () => {
             reviews: "2",
             img: "/assets/the-prince-custom-pet-portrait.webp",
             bestSeller: true,
+            category: "Father's Day"
         },
         {
             id: 3,
@@ -34,6 +36,7 @@ const Products = () => {
             reviews: "15,979",
             img: "/assets/custom-line-drawing-one-pet-portrait.webp",
             bestSeller: true,
+            category: "Mother's Day"
         },
         {
             id: 4,
@@ -43,6 +46,7 @@ const Products = () => {
             reviews: "15,979",
             img: "/assets/custom-two-pet-portrait.webp",
             bestSeller: false,
+            category: "Anniversary"
         },
         {
             id: 5,
@@ -52,6 +56,7 @@ const Products = () => {
             reviews: "1",
             img: "/assets/the-proper-lady-custom-pet-portrait.webp",
             bestSeller: false,
+            category: "Wedding"
         },
         {
             id: 6,
@@ -61,6 +66,7 @@ const Products = () => {
             reviews: "",
             img: "/assets/custom-embroidered-pet-crewneck.webp",
             bestSeller: false,
+            category: "Get Well"
         },
         {
             id: 7,
@@ -70,6 +76,7 @@ const Products = () => {
             reviews: "15,979",
             img: "/assets/custom-two-pet-line-drawing-portrait.webp",
             bestSeller: false,
+            category: "Housewarming"
         },
         {
             id: 8,
@@ -79,6 +86,7 @@ const Products = () => {
             reviews: "",
             img: "/assets/the-duke-&-duchess-custom-pet-portrait.webp",
             bestSeller: true,
+            category: "Father's Day"
         },
         {
             id: 9,
@@ -88,6 +96,7 @@ const Products = () => {
             reviews: "15,979",
             img: "/assets/three-pet-line-drawing-portrait.webp",
             bestSeller: false,
+            category: "Mother's Day"
         },
         {
             id: 10,
@@ -97,6 +106,7 @@ const Products = () => {
             reviews: "",
             img: "/assets/custom-embroidered-pet-hoodie.webp",
             bestSeller: false,
+            category: "Anniversary"
         },
         {
             id: 11,
@@ -106,6 +116,7 @@ const Products = () => {
             reviews: "",
             img: "/assets/custom-embroidered-pet-trucker-hat.webp",
             bestSeller: false,
+            category: "Wedding"
         },
         {
             id: 12,
@@ -115,8 +126,10 @@ const Products = () => {
             reviews: "15,979",
             img: "/assets/custom-three-pet-portrait.webp",
             bestSeller: false,
+            category: "Get Well"
         },
     ];
+
 
     const productsPerPage = 9;
     const [currentPage, setCurrentPage] = useState(1);
@@ -124,18 +137,21 @@ const Products = () => {
 
     const handleFilterChange = (filterValue) => {
         setFilter(filterValue);
-        setCurrentPage(1); 
+        setCurrentPage(1);
     };
 
+  
     const filteredProducts = productData.filter(product => {
         if (filter === 'bestSellers') {
             return product.bestSeller;
         } else if (filter === 'priceLowToHigh') {
-            return true; 
+            return true;
         } else if (filter === 'priceHighToLow') {
-            return true; 
+            return true;
         } else if (filter === 'reviews') {
             return product.reviews;
+        } else if (filter && filter !== 'clear') {
+            return product.category === filter;
         }
         return true;
     });
@@ -167,6 +183,7 @@ const Products = () => {
     return (
         <section className='mb-10 px-3'>
             <div className='max-w-[1296px] mx-auto w-full'>
+
                 <div className='flex items-center justify-between mb-3 flex-col md:flex-row gap-5'>
                     <h2 className='text-[#141518] text-[32px] md:text-[48px] leading-[1.2] cooper-m'>
                         West & Willow Pet Portraits
@@ -174,11 +191,40 @@ const Products = () => {
                     <FilterDropdown onFilterChange={handleFilterChange} />
                 </div>
 
+                <ul className='flex items-center gap-4 my-10 justify-between w-full overflow-x-auto no-scrollbar'>
+                    <li className='px-4 py-2 cursor-pointer rounded-xl min-w-fit bg-[#ccebff] flex items-center gap-3'>
+                        <img src="/assets/calender.svg" alt="calender" className='w-10 h-10 bg-[#fdd95c] rounded-full p-2' />
+                        <span className='font-medium text-xl karla-m whitespace-nowrap'>Housewarming</span>
+                    </li>
+                    <li className='px-4 py-2 cursor-pointer rounded-xl min-w-fit bg-[#f1641e] flex items-center gap-3'>
+                        <img src="/assets/calender.svg" alt="calender" className='w-10 h-10 bg-[#ccebff] rounded-full p-2' />
+                        <span className='font-medium text-xl karla-m whitespace-nowrap'> Father's Day</span>
+                    </li>
+
+                    <li className='px-4 py-2 cursor-pointer rounded-xl min-w-fit bg-[#8c8af0] flex items-center gap-3'>
+                        <img src="/assets/calender.svg" alt="calender" className='w-10 h-10 bg-[#fdd95c] rounded-full p-2' />
+                        <span className='font-medium text-xl karla-m whitespace-nowrap'> Mother's Day </span>
+                    </li>
+                    <li className='px-4 py-2 cursor-pointer rounded-xl min-w-fit bg-[#21b55a] flex items-center gap-3'>
+                        <img src="/assets/calender.svg" alt="calender" className='w-10 h-10 bg-[#fdd95c] rounded-full p-2' />
+                        <span className='font-medium text-xl karla-m whitespace-nowrap'> Anniversary </span>
+                    </li>
+                    <li className='px-4 py-2 cursor-pointer rounded-xl min-w-fit bg-[#8c8af0] flex items-center gap-3'>
+                        <img src="/assets/calender.svg" alt="calender" className='w-10 h-10 bg-[#fdd95c] rounded-full p-2' />
+                        <span className='font-medium text-xl karla-m whitespace-nowrap'>Wedding</span>
+                    </li>
+                    <li className='px-4 py-2 cursor-pointer rounded-xl min-w-fit bg-[#2638c0] flex items-center gap-3'>
+                        <img src="/assets/calender.svg" alt="calender" className='w-10 h-10 bg-[#fdd95c] rounded-full p-2' />
+                        <span className='font-medium text-white text-xl karla-m whitespace-nowrap'>Get Well</span>
+                    </li>
+                </ul>
+
+
                 <div className='grid grid-cols-1 xxxs:grid-cols-2 lmd:grid-cols-3 gap-4 sm:gap-7 mt-8'>
                     {currentProducts.map((product) => (
                         <div key={product.id} className='cursor-pointer'>
                             <div className='bg-[#F8F8F8] mb-3 relative rounded-2xl' style={{ boxShadow: "0 .125rem .25rem #00000020" }}>
-                                <img src={product.img} alt={product.name} className='h-[242px] lmd:h-[408px] w-full' />
+                                <img src={product.img} alt={product.name} className='h-[242px] lmd:h-[408px] w-full rounded-2xl' />
                                 {product.bestSeller && (
                                     <span className='py-[4.2px] px-[7.8px] text-white bg-bg-primary text-xs karla-m tracking-wide rounded-[50px] absolute top-2 left-2 uppercase'>Best Seller</span>
                                 )}

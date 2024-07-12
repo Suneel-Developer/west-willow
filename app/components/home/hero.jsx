@@ -5,9 +5,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
+import 'swiper/css/pagination';
 
-// import required modules
-import { Autoplay } from 'swiper/modules';
+// Import required modules
+import { Autoplay, Pagination } from 'swiper/modules';
+
 
 const Hero = () => {
     return (
@@ -16,11 +18,13 @@ const Hero = () => {
                 <div className='overflow-hidden h-full min-h-[650px] rounded-3xl'>
                     <Swiper
                         centeredSlides={true}
-                        autoplay={{
-                            delay: 5000,
-                            disableOnInteraction: false,
+                        autoplay={false}
+                        pagination={{
+                            clickable: true,
+                            bulletClass: 'swiper-pagination-bullet',
+                            bulletActiveClass: 'swiper-pagination-bullet-active', // custom active bullet class
                         }}
-                        modules={[Autoplay]}
+                        modules={[Autoplay, Pagination]}
                         className="mySwiper"
                     >
                         <SwiperSlide className='h-full min-h-[697px] relative'>

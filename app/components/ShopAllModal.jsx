@@ -49,6 +49,7 @@ const ShopAllModal = ({ isOpen, onClose }) => {
                             <Link onClick={handleOverlayClick} href="#" className='text-base karla-b text-bg-primary uppercase flex items-center'>
                                 Shop All
                                 <MdArrowDropDown onClick={handleOverlayClick} className='text-bg-primary rotate-180' />
+                                <div className='w-2 h-2 bg-[#ff5c5d] rounded-full absolute top-1 right-6'></div>
                             </Link>
                         </li>
                     </div>
