@@ -44,7 +44,10 @@ const Header = () => {
                         <button onClick={openShopAllModal} className='text-base karla-b text-bg-primary uppercase flex items-center'>
                             Shop All
                             <MdArrowDropDown className='text-bg-primary' />
-                            <div className='w-2 h-2 bg-[#ff5c5d] rounded-full absolute top-1 right-6'></div>
+                            <div className='flex justify-center items-center bg-[#ff5c5d] rounded-full mr-1 mt-1 absolute top-0 right-4'>
+                                <div className='pulse-dot-ring border-[3px] border-[#ff5c5d] rounded-full w-[22px] h-[22px] absolute'></div>
+                                <div className='bg-[#ff5c5d] w-3 h-3 rounded-full'></div>
+                            </div>
                         </button>
                     </li>
                 </div>
@@ -77,8 +80,13 @@ const Header = () => {
                         </button>
                     </li>
                     <li>
-                        <button onClick={openShopAllModal} className='py-2 px-2 xlg:hidden flex items-center justify-center relative'>
+                        <button onClick={openShopAllModal} className='py-1 px-3 xlg:hidden flex items-center justify-center relative'>
                             <img src="/assets/toggle.svg" alt="toggle" className='w-6 h-6' />
+
+                            <div className='flex justify-center items-center bg-[#ff5c5d] rounded-full mr-1 mt-1 absolute top-0 right-0'>
+                                <div className='pulse-dot-ring border-[3px] border-[#ff5c5d] rounded-full w-[22px] h-[22px] absolute'></div>
+                                <div className='bg-[#ff5c5d] w-3 h-3 rounded-full'></div>
+                            </div>
                         </button>
                     </li>
                 </ul>

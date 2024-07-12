@@ -140,7 +140,11 @@ const Products = () => {
         setCurrentPage(1);
     };
 
-  
+    const handleCategoryClick = (category) => {
+        setFilter(category);
+        setCurrentPage(1);
+    };
+
     const filteredProducts = productData.filter(product => {
         if (filter === 'bestSellers') {
             return product.bestSeller;
@@ -180,44 +184,50 @@ const Products = () => {
         }
     };
 
+
     return (
         <section className='mb-10 px-3'>
             <div className='max-w-[1296px] mx-auto w-full'>
 
-                <div className='flex items-center justify-between mb-3 flex-col md:flex-row gap-5'>
-                    <h2 className='text-[#141518] text-[32px] md:text-[48px] leading-[1.2] cooper-m'>
-                        West & Willow Pet Portraits
-                    </h2>
-                    <FilterDropdown onFilterChange={handleFilterChange} />
-                </div>
+
+
+                {/* Categoryies  */}
 
                 <ul className='flex items-center gap-4 my-10 justify-between w-full overflow-x-auto no-scrollbar'>
-                    <li className='px-4 py-2 cursor-pointer rounded-xl min-w-fit bg-[#ccebff] flex items-center gap-3'>
+                    <li onClick={() => handleCategoryClick('Housewarming')} className='px-4 py-2 cursor-pointer rounded-xl min-w-fit bg-[#ccebff] flex items-center gap-3'>
                         <img src="/assets/calender.svg" alt="calender" className='w-10 h-10 bg-[#fdd95c] rounded-full p-2' />
                         <span className='font-medium text-xl karla-m whitespace-nowrap'>Housewarming</span>
                     </li>
-                    <li className='px-4 py-2 cursor-pointer rounded-xl min-w-fit bg-[#f1641e] flex items-center gap-3'>
+                    <li onClick={() => handleCategoryClick("Father's Day")} className='px-4 py-2 cursor-pointer rounded-xl min-w-fit bg-[#f1641e] flex items-center gap-3'>
                         <img src="/assets/calender.svg" alt="calender" className='w-10 h-10 bg-[#ccebff] rounded-full p-2' />
                         <span className='font-medium text-xl karla-m whitespace-nowrap'> Father's Day</span>
                     </li>
 
-                    <li className='px-4 py-2 cursor-pointer rounded-xl min-w-fit bg-[#8c8af0] flex items-center gap-3'>
+                    <li onClick={() => handleCategoryClick("Mother's Day")} className='px-4 py-2 cursor-pointer rounded-xl min-w-fit bg-[#8c8af0] flex items-center gap-3'>
                         <img src="/assets/calender.svg" alt="calender" className='w-10 h-10 bg-[#fdd95c] rounded-full p-2' />
                         <span className='font-medium text-xl karla-m whitespace-nowrap'> Mother's Day </span>
                     </li>
-                    <li className='px-4 py-2 cursor-pointer rounded-xl min-w-fit bg-[#21b55a] flex items-center gap-3'>
+                    <li onClick={() => handleCategoryClick('Anniversary')} className='px-4 py-2 cursor-pointer rounded-xl min-w-fit bg-[#21b55a] flex items-center gap-3'>
                         <img src="/assets/calender.svg" alt="calender" className='w-10 h-10 bg-[#fdd95c] rounded-full p-2' />
                         <span className='font-medium text-xl karla-m whitespace-nowrap'> Anniversary </span>
                     </li>
-                    <li className='px-4 py-2 cursor-pointer rounded-xl min-w-fit bg-[#8c8af0] flex items-center gap-3'>
+                    <li onClick={() => handleCategoryClick('Wedding')} className='px-4 py-2 cursor-pointer rounded-xl min-w-fit bg-[#8c8af0] flex items-center gap-3'>
                         <img src="/assets/calender.svg" alt="calender" className='w-10 h-10 bg-[#fdd95c] rounded-full p-2' />
                         <span className='font-medium text-xl karla-m whitespace-nowrap'>Wedding</span>
                     </li>
-                    <li className='px-4 py-2 cursor-pointer rounded-xl min-w-fit bg-[#2638c0] flex items-center gap-3'>
+                    <li onClick={() => handleCategoryClick('Get Well')} className='px-4 py-2 cursor-pointer rounded-xl min-w-fit bg-[#2638c0] flex items-center gap-3'>
                         <img src="/assets/calender.svg" alt="calender" className='w-10 h-10 bg-[#fdd95c] rounded-full p-2' />
                         <span className='font-medium text-white text-xl karla-m whitespace-nowrap'>Get Well</span>
                     </li>
                 </ul>
+
+
+                <div className='flex items-center justify-between w-full mb-3 flex-col md:flex-row gap-5'>
+                    <h2 className='text-[#141518] flex-1 text-[32px] md:text-[48px] leading-[1.2] cooper-m'>
+                        West & Willow Pet Portraits
+                    </h2>
+                    <FilterDropdown onFilterChange={handleFilterChange} />
+                </div>
 
 
                 <div className='grid grid-cols-1 xxxs:grid-cols-2 lmd:grid-cols-3 gap-4 sm:gap-7 mt-8'>

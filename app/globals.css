@@ -149,3 +149,15 @@ swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swipe
     background: black;
     border: 3px solid #ffff;
 }
+
+
+.pulse-dot-ring {
+    animation: pulse_dot_animation 1s ease-out;
+    animation-iteration-count: infinite; 
+    opacity: 0.0
+}
+@keyframes pulse_dot_animation {
+    0% {transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% { opacity: 1.0;}
+    100% { transform: scale(1.2, 1.2); opacity: 0.0;}
+}
