@@ -39,7 +39,7 @@ const CartComponent = ({ onClose }) => {
 
                 <div className='p-4 overflow-y-auto no-scrollbar'>
                     <div className='mb-4'>
-                        <p className='text-sm text-bg-primary mb-1 text-center karla-r'>Congrats! You're eligible for <strong>FREE Shipping.</strong></p>
+                        <p className='text-sm text-bg-primary mb-1 text-center karla-r'>Congrats! You are eligible for <strong>FREE Shipping.</strong></p>
                         <div className='h-2 rounded-[.25rem] bg-bg-primary w-full'></div>
                     </div>
 

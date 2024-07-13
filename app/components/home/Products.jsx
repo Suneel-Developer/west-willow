@@ -200,12 +200,12 @@ const Products = () => {
                     </li>
                     <li onClick={() => handleCategoryClick("Father's Day")} className='px-4 py-2 cursor-pointer rounded-xl min-w-fit bg-[#f1641e] flex items-center gap-3'>
                         <img src="/assets/calender.svg" alt="calender" className='w-10 h-10 bg-[#ccebff] rounded-full p-2' />
-                        <span className='font-medium text-xl karla-m whitespace-nowrap'> Father's Day</span>
+                        <span className='font-medium text-xl karla-m whitespace-nowrap'> Fathers Day</span>
                     </li>
 
                     <li onClick={() => handleCategoryClick("Mother's Day")} className='px-4 py-2 cursor-pointer rounded-xl min-w-fit bg-[#8c8af0] flex items-center gap-3'>
                         <img src="/assets/calender.svg" alt="calender" className='w-10 h-10 bg-[#fdd95c] rounded-full p-2' />
-                        <span className='font-medium text-xl karla-m whitespace-nowrap'> Mother's Day </span>
+                        <span className='font-medium text-xl karla-m whitespace-nowrap'> Mothers Day </span>
                     </li>
                     <li onClick={() => handleCategoryClick('Anniversary')} className='px-4 py-2 cursor-pointer rounded-xl min-w-fit bg-[#21b55a] flex items-center gap-3'>
                         <img src="/assets/calender.svg" alt="calender" className='w-10 h-10 bg-[#fdd95c] rounded-full p-2' />
