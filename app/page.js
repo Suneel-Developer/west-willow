@@ -1,5 +1,6 @@
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import AutoText from "./components/home/AutoText";
 import BrowseReviews from "./components/home/BrowseReviews";
 import ComponiesLogo from "./components/home/ComponiesLogo";
 import CustomShopNow from "./components/home/CustomShopNow";
@@ -18,6 +19,7 @@ export default function Home() {
       <Header />
       <Hero />
       <ComponiesLogo />
+      <AutoText />
       <Products />
       <CustomShopNow />
       <BrowseReviews />
